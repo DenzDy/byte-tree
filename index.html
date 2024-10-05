@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byte Fam Tree</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .tree {
+            text-align: center;
+            position: relative;
+        }
+
+        .tree ul {
+            padding-top: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .tree ul::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-top: 1px solid #ccc;
+            width: 1px;
+            height: 20px;
+        }
+
+        .tree li {
+            list-style-type: none;
+            margin: 0 20px;
+            position: relative;
+            padding: 20px 5px 0 5px;
+        }
+
+        .tree li::before,
+        .tree li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 50%;
+            border-top: 1px solid #ccc;
+        }
+
+        .tree li::before {
+            right: 50%;
+            border-right: 1px solid #ccc;
+        }
+
+        .tree li::after {
+            left: 50%;
+            border-left: 1px solid #ccc;
+        }
+
+        .tree li:only-child::after,
+        .tree li:only-child::before {
+            display: none;
+        }
+
+        .tree li:only-child {
+            padding-top: 0;
+        }
+
+        .tree li a {
+            text-decoration: none;
+            color: #333;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background: #fff;
+            border: 1px solid #ccc;
+        }
+
+        .tree li a img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        .tree li a:hover {
+            background: #e3e3e3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="tree">
+    <ul>
+        <li>
+            <a href="#">
+                <img src="./aira.jpg" alt="Aira Aloveros">
+                Aira Aloveros
+            </a>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="./chiron.jpg" alt="Chiron Cortez">
+                        Chiron Cortez
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./julia dy.jpg" alt="Julia Dy">
+                                Julia Dy
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="./johndell.jpg" alt="Johndell">
+                                        Johndell
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./me.jpg" alt="Denzell">
+                                        Denzell
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./sheena.jpg" alt="Annika">
+                                        Annika
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="./luis.jpg" alt="Luis">
+                                                Luis
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./julia sabado.jpg" alt="Julia Sabado">
+                                Julia Sabado
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
